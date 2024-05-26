@@ -26,10 +26,20 @@ https://t.me/easyptech
 go build ./cmd/easyp
 ```
 
+Alternatively, you can build a docker image:
+```bash
+DOCKER_BUILDKIT=1 docker build -f Docker/base/Dockerfile . -t easyp:local-build
+```
+
 ### Install from github
 
 ```bash
 go install github.com/easyp-tech/easyp/cmd/easyp@latest
+```
+
+### Pull a ready-to-use image
+```bash
+docker pull easyp-tech/easyp:latest
 ```
 
 ## Linter
